@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block meta %}
+    <meta http-equiv="refresh" content="9;url={{ jobs.url }}" />
+{% endblock %}
+
+{% block title %} View Job | {{ super() }} {% endblock %}
+
+{% block style %}    <!-- bootstrap -->
+    <link href="../static/theme/css/coupon.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        
+        <div class="panel panel-default coupon">
+          
+          <div class="panel-heading" id="head">
+            <div class="panel-title" id="title">
+            		<img src="../static/theme/images/logo.png" alt="">
+                <span class="hidden-xs">View Job Ad</span>
+                <span class="visible-xs">View Job Ad</span>
+            </div>
+          </div>
+          
+          <div class="panel-body">
+            <!-- <img src="http://i.imgur.com/e07tg8R.png" class="coupon-img img-rounded"> -->
+            <div class="row">
+              <div class="offer text-center">
+                  {# <span class="usd"><sup>$</sup></span> #}
+                  <span class="number"></span>
+                  <span class="cents"><sup>Sec</sup></span>
+              </div>            	
+            </div>
+
+            <div class="col-md-12 text-center">
+          			<!--
+                <ul class="items">
+                    <li>Add up to 5 quarts of motor oil (per specification)</li>
+                    <li>Complimentary multi-point inspection</li>
+                    <li>Drain and refill trnasmission fluid</li>
+                    <li>System inspection</li>
+                </ul>
+                -->
+                <h4>Wait... while we redirect you to job page</h4>
+                <!-- Advert banner here -->
+            </div>
+
+          </div>
+          {# <div class="panel-footer"><button class="btn btn-success btn-block">Can't Wait... View Job!</button></div> #}
+        </div>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="../static/theme/js/counter.js"></script>
+    <script type="text/javascript">
+      var myCounter = new Countdown({  
+          seconds:10,  // number of seconds to count down
+          onUpdateStatus: function(sec){
+            $('.number').html(sec)
+            // console.log(sec);
+            }, // callback for each second
+          onCounterEnd: function(){ 
+              // alert('counter ended!');
+            } // final action
+      });
+
+      myCounter.start();      
+    </script>
+{% endblock %}
