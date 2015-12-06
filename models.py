@@ -4,9 +4,9 @@ import datetime
 
 
 DATABASE = MySQLDatabase(
-	'career', #Database name
-	user='root', #Database username
-	password='Adefioye&^%$#@!', #Database password
+	'XXXXXX', #Database name
+	user='XXXX', #Database username
+	password='XXXXXX', #Database password
 	host='127.0.0.1', # host
 	)
 
